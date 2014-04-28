@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+]>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		xml:base="http://e-uczelnia.uek.krakow.pl/RDF">
+
+
+		<rdfs:Class rdf:about="#Zajecia"/>
+        <rdfs:Class rdf:about="#Uczen"/>
+        <rdfs:Class rdf:about="#Pracownik"/>
+
+        <rdfs:Class rdf:about="#Prowadzacy">
+            <rdfs:subClassOf rdf:resource="#Pracownik"/>
+        </rdfs:Class>
+
+        <rdfs:Class rdf:about="#Doktor">
+            <rdfs:subClassOf rdf:resource="#Prowadzacy"/>
+        </rdfs:Class>
+        <rdfs:Class rdf:about="#Dyrektor">
+            <rdfs:subClassOf rdf:resource="#Pracownik"/>
+        </rdfs:Class>
+
+
+        <rdf:Property rdf:about="#jestZwiazanyZ">
+            <rdfs:domain rdf:resource="#Prowadzacy"/>
+            <rdfs:range rdf:resource="#Zajecia"/>
+        </rdf:Property>
+
+        <rdf:Property rdf:about="#prowadzi">
+            <rdfs:comment>dziedziczy dziedzine i zakres z wlasciowsci jestZwiazanyZ</rdfs:comment>
+            <rdfs:subPropertyOf rdf:resource="#jestZwiazanyZ"/>
+        </rdf:Property>
+
+         <rdf:Property rdf:about="#uczesczaNa">
+            <rdfs:domain rdf:resource="#Uczen"/>
+            <rdfs:range rdf:resource="#Zajecia"/>
+        </rdf:Property>
+
+        <rdf:Property rdf:about="#nazwisko">
+            <rdfs:domain rdf:resource="#Pracownik"/>
+            <rdfs:range rdf:resource= "&rdf;Literal"/>
+        </rdf:Property>
+
+        <rdf:Property rdf:about="#email">
+            <rdfs:domain rdf:resource="#Pracownik"/>
+            <rdfs:range rdf:resource= "&rdf;Literal"/>
+        </rdf:Property>
+
+        <rdf:Property rdf:about="#Nazwa">
+            <rdfs:domain rdf:resource="#Zajecia"/>
+            <rdfs:range rdf:resource= "&rdf;Literal"/>
+        </rdf:Property>
+
+        <rdf:Property rdf:about="#Imie">
+            <rdfs:domain rdf:resource="#Uczen"/>
+            <rdfs:range rdf:resource= "&rdf;Literal"/>
+        </rdf:Property>
+
+         <rdf:Property rdf:about="#Wiek">
+            <rdfs:domain rdf:resource="#Uczen"/>
+            <rdfs:range rdf:resource= "&rdf;Literal"/>
+        </rdf:Property>
+
+</rdf:RDF>

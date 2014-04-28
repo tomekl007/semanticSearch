@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:m="file:///E:/twinkle/przykladRDFS#">
+
+        <m:Wyklad rdf:ID="W1">
+                <m:nazwa>Sieci semantyczne</m:nazwa>
+                <m:prowadzi rdf:resource="#P1"/>
+        </m:Wyklad>
+
+        <m:Wykladowca rdf:ID="P1">
+                <m:nazwisko>Grażyna Paliwoda-Pękosz</m:nazwisko>
+                <m:email>paliwodg@uek.krakow.pl</m:email>
+        </m:Wykladowca>
+
+</rdf:RDF>

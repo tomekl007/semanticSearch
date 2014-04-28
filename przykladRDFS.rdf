@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+]>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		xml:base="http://e-uczelnia.uek.krakow.pl/RDF">
+		
+		<rdfs:Class rdf:about="#Wyklad"/>
+        <rdfs:Class rdf:about="#Pracownik"/>
+      
+        <rdfs:Class rdf:about="#Wykladowca">
+            <rdfs:subClassOf rdf:resource="#Pracownik"/>
+        </rdfs:Class>
+
+        <rdfs:Class rdf:about="#Profesor">
+            <rdfs:subClassOf rdf:resource="#Wykladowca"/>
+        </rdfs:Class>
+
+        <rdfs:Class rdf:about="#Adiunkt">
+            <rdfs:subClassOf rdf:resource="#Wykladowca"/>
+        </rdfs:Class>
+
+        <rdfs:Class rdf:about="#Asystent">
+            <rdfs:subClassOf rdf:resource="#Wykladowca"/>
+        </rdfs:Class>
+
+        <rdf:Property rdf:about="#jestZwiazanyZ">
+            <rdfs:domain rdf:resource="#Wykladowca"/>
+            <rdfs:range rdf:resource="#Wyklad"/>
+        </rdf:Property>
+
+        <rdf:Property rdf:about="#prowadzi">
+            <rdfs:comment>dziedziczy dziedzine i zakres z wlasciowsci jestZwiazanyZ</rdfs:comment>
+            <rdfs:subPropertyOf rdf:resource="#jestZwiazanyZ"/>
+        </rdf:Property>
+
+        <rdf:Property rdf:about="#nazwisko">
+            <rdfs:domain rdf:resource="#Pracownik"/>
+            <rdfs:range rdf:resource= "&rdf;Literal"/>
+        </rdf:Property>
+
+        <rdf:Property rdf:about="#email">
+            <rdfs:domain rdf:resource="#Pracownik"/>
+            <rdfs:range rdf:resource= "&rdf;Literal"/>
+        </rdf:Property>
+
+        <rdf:Property rdf:about="#Nazwa">
+            <rdfs:domain rdf:resource="#Wyklad"/>
+            <rdfs:range rdf:resource= "&rdf;Literal"/>
+        </rdf:Property>
+
+</rdf:RDF>

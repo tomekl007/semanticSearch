@@ -1,0 +1,10 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX : <http://dbpedia.org/resource/>
+SELECT ?film
+WHERE
+{
+   ?film dbo:director :Quentin_Tarantino .
+   ?film dbpprop:country :United_States .
+
+
+}

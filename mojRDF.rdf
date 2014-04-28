@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:m="file:///E:/twinkle/przykladRDFS#">
+
+        <m:Zajecia rdf:ID="Z1">
+                <m:nazwa>Sieci semantyczne</m:nazwa>
+                <m:prowadzi rdf:resource="#P1"/>
+        </m:Zajecia>
+
+        <m:Prowadzacy rdf:ID="P1">
+                <m:nazwisko>Michal Celeda</m:nazwisko>
+                <m:email>mc@gmail.com</m:email>
+        </m:Prowadzacy>
+
+         <m:Uczen rdf:ID="U1">
+                <m:nazwisko>Tomasz Lelek</m:nazwisko>
+                <m:wiek>22</m:email>
+                <m:uczesczaNa rdf:resource="Z1"/>
+        </m:Uczen>
+
+        <m:Dyrektor rdf:ID="P1">
+                <m:nazwisko>Marcin Kladka</m:nazwisko>
+                <m:email>mk@gmail.com</m:email>
+        </m:Dyrektor>
+
+         <m:Uczen rdf:ID="U1">
+                <m:nazwisko>Tomasz Bosak</m:nazwisko>
+                <m:wiek>25</m:email>
+                <m:uczesczaNa rdf:resource="Z1"/>
+        </m:Uczen>
+
+</rdf:RDF>
